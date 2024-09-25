@@ -138,6 +138,7 @@ input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    width: 100%;
 }
 
 button[type="submit"] {
@@ -167,4 +168,78 @@ footer {
     color: #ffffff;
     text-align: center;
     padding: 20px;
+}
+
+/* Responsive Design */
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    /* Adjust navbar layout */
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Adjust hero section */
+    .hero {
+        height: 300px;
+        background-size: cover;
+        padding: 20px;
+    }
+
+    /* Stack merchandise items */
+    .merch-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Form adjustments */
+    form {
+        width: 90%;
+    }
+
+    /* Adjust footer */
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Small screen styles */
+@media only screen and (max-width: 480px) {
+    .hero {
+        height: 250px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .navbar-logo {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
