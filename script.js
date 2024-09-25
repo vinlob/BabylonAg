@@ -3,8 +3,7 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
 hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('nav-menu-active');
-    hamburger.classList.toggle('toggle');
+    navMenu.classList.toggle('active');
 });
 
 // Close menu when a link is clicked (for mobile)
