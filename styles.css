@@ -19,7 +19,6 @@ h1, h2, h3 {
 /* Navigation Bar */
 .navbar {
     background-color: #004953;
-    color: #ffffff;
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -170,20 +169,23 @@ footer {
     padding: 20px;
 }
 
-/* Responsive Design */
+/* Mobile Responsive Styles */
 
-/* Mobile styles */
+/* Adjustments for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
-    /* Adjust navbar layout */
-    .navbar-container {
-        flex-direction: column;
-        align-items: flex-start;
+    /* Display hamburger menu */
+    .hamburger {
+        display: flex;
     }
 
     .nav-menu {
+        display: none;
         flex-direction: column;
         width: 100%;
-        display: none;
+        background-color: #004953;
+        position: absolute;
+        top: 60px;
+        left: 0;
     }
 
     .nav-menu.active {
@@ -191,52 +193,56 @@ footer {
     }
 
     .nav-item {
-        margin-left: 0;
-        padding: 10px 0;
         width: 100%;
         text-align: left;
+        padding: 10px;
     }
 
-    .hamburger {
-        display: flex;
+    .nav-link {
+        padding: 10px;
+        display: block;
+    }
+
+    .nav-link:hover {
+        background-color: #ffcc00;
+        color: #004953;
     }
 
     /* Adjust hero section */
     .hero {
         height: 300px;
         background-size: cover;
-        padding: 20px;
     }
 
-    /* Stack merchandise items */
+    /* Stack merchandise items vertically */
     .merch-container {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Form adjustments */
+    /* Adjust form */
     form {
         width: 90%;
     }
 
-    /* Adjust footer */
+    /* Adjust footer padding */
     footer {
         padding: 10px;
     }
 }
 
-/* Small screen styles */
+/* Additional adjustments for very small screens (under 480px) */
 @media only screen and (max-width: 480px) {
     .hero {
         height: 250px;
     }
 
-    .nav-link {
-        font-size: 16px;
-    }
-
     .navbar-logo {
         font-size: 20px;
+    }
+
+    .nav-link {
+        font-size: 16px;
     }
 
     button {
